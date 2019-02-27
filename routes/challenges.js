@@ -4,7 +4,10 @@ module.exports = async function(req, res) {
   const {id} = req.params
 
   if(req.method === 'GET') {
-    res.render(`challenges/${id}`)
+    if(id)
+      res.render(`challenges/${id}`)
+    else
+      res.render('challenges')
   }
 
   if(req.method === 'POST') {

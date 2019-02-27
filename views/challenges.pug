@@ -1,0 +1,9 @@
+body
+  - links = []
+  - i = 1
+  while i <= 9
+    - links.push({a: "/challenges/"+i, label: "Question " + i})
+    - i++
+  each link in links
+    li
+      a(href=link.a)= link.label

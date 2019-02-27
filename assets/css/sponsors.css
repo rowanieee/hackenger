@@ -1,0 +1,74 @@
+.sponsorship-tier {
+  display: flex;
+  align-items: center;
+}
+
+.sponsorship-tier > h2 {
+  font-size:24px;
+  color: #333;
+  line-height: 52px;
+  padding-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin: 0;
+}
+
+.sponsor-label {
+  font-size: 24px;
+}
+
+.sponsor {
+  padding-bottom: 48px;
+}
+
+.sp-logo {
+}
+
+.profhacks-cares {
+  max-height: 20em;
+}
+
+.sponsor-platinum .sp-logo {
+  max-height: 20em;
+  width: auto;
+}
+
+.sponsor-gold .sp-logo{
+  max-height: 14em;
+  width: auto;
+}
+
+.sponsor-bronze .sp-logo{
+  max-height: 12em;
+  width: auto;
+}
+
+.sponsor-partner .sp-logo{
+  max-height: 8em;
+  width: auto;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .sponsor-platinum .sp-logo {
+    max-height: 20em;
+    width: auto;
+  }
+
+  .sponsor-gold .sp-logo{
+    max-height: 8em;
+    width: auto;
+  }
+
+  .sponsor-bronze .sp-logo{
+    max-height: 6em;
+    width: auto;
+  }
+
+  .sponsor-partner .sp-logo{
+    max-height: 6em;
+    width: auto;
+  }
+
+}

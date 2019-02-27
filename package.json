@@ -1,0 +1,26 @@
+{
+  "name": "hackenger19",
+  "version": "1.0.0",
+  "description": "Scavenger Hunt for ProfHacks19",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app"
+  },
+  "author": "John McAvoy",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.0.1",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.0.0",
+    "nodemon": "^1.18.5",
+    "pg": "^7.6.1",
+    "pug": "^2.0.3",
+    "require-all": "^3.0.0"
+  },
+  "nodemonConfig": {
+    "ext": "pug,js,ejs"
+  },
+  "devDependencies": {
+    "stylelint-config-recommended": "^2.1.0"
+  }
+}

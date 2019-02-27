@@ -34,6 +34,7 @@ if(appConfig.requireHttps)
 app.get("/", routes.dashboard.home);
 app.get("/dashboard/home", routes.dashboard.home);
 app.get("/team/register", routes.team.register);
+app.get("/challenges/:id([1-9])", routes.challenges);
 app.get("*", routes.page_not_found);
 
 app.post("/dashboard/home", routes.dashboard.home);

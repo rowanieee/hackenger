@@ -1,0 +1,23 @@
+mixin challenge(id, prompt, img)
+  - pageName = 'Q'+id
+  include ./header
+  +header(pageName)
+  body
+    include ./navbar
+    +navbar(pageName)
+    section.intro(style="min-height:100vh;min-width:100vw;")
+      .container
+        .row.text-center
+          .col-sm-12
+            .heading-count
+            h2 Challenge ##{id}:
+        .row.text-center
+          .col-sm-12
+            p.col-xs-12=prompt
+        .row.text-center
+          .col-sm-12
+            form(method="POST")
+              input.form-group(type="text", name="answer")
+              button.btn.form-group Submit
+
+  script(src="/assets/js/menu.js")

@@ -39,5 +39,6 @@ app.get("*", routes.page_not_found);
 
 app.post("/dashboard/home", routes.dashboard.home);
 app.post("/team/register", routes.team.register);
+app.post("/challenges/:id([1-9])", routes.challenges);
 
 app.listen(appConfig.port);

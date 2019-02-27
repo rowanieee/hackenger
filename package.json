@@ -4,7 +4,8 @@
   "description": "Scavenger Hunt for ProfHacks19",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon app"
+    "test": "nodemon app",
+    "start": "node app"
   },
   "author": "John McAvoy",
   "license": "ISC",

@@ -13,5 +13,8 @@ module.exports = {
     ssl: {
       rejectUnauthorized: false
     }
+  },
+  challenges:{
+    solutions: env.SOLUTIONS.split(' ')
   }
 }

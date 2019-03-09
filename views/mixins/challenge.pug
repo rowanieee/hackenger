@@ -13,11 +13,18 @@ mixin challenge(id, prompt, img)
             h2 Challenge ##{id}:
         .row.text-center
           .col-sm-12
-            p.col-xs-12=prompt
+            p.col-xs-12 !{prompt}
+        if(img)
+          .row
+            .col-sm-12.text-center
+              img.img-fluid.img-challenge(src=`/assets/img/challenges/${id}.png`)
         .row.text-center
           .col-sm-12
             form(method="POST")
               input.form-group(type="text", name="answer")
               button.btn.form-group Submit
+        if correct != undefined
+          .row.text-center
+            h2= correct ? "Correct!" : "Incorrect"
 
   script(src="/assets/js/menu.js")

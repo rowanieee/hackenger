@@ -1,9 +1,40 @@
+- pageName = Challenges
+include ./mixins/header
++header(pageName)
 body
-  - links = []
-  - i = 1
-  while i <= 9
-    - links.push({a: "/challenges/"+i, label: "Question " + i})
-    - i++
-  each link in links
-    li
-      a(href=link.a)= link.label
+  include ./mixins/navbar
+  +navbar(pageName)
+  section.intro
+    .container
+      .row.text-center
+        .col-md-12.col-sm-12.col-xs-12
+          .heading-count
+            img#prof_img(src="/assets/img/transparent_prof.png").img-fluid
+            h2 Hackenger
+            h3=team_name
+          a.target-scroll.page-scroll(href="#challenges", target="_blank")
+            i.fas.fa-chevron-down.fa-2x
+  section#challenges.section-padding-top.section-padding-bottom
+    .container
+      .row.justify-content-center
+        h3 Total Points: #{teamInfo.totalPoints}
+      .row.justify-content-center
+        h5 Ranking: #{teamInfo.ranking.rank}/#{teamInfo.ranking.outOf}
+      .row.justify-content-center
+      - links = []
+       - i = 1
+       while i <= 7
+         - links.push({a: "/challenges/"+i, label: "Challenge " + i})
+         - i++
+      br
+      table.table.table-sm
+        thead
+          tr
+            th Challenges
+            th Points
+            th Status
+        each link, index in links
+          tr
+            td.event-header: a(href=link.a)= link.label
+            td: span=teamInfo.challenges.points[index]
+            td: span=teamInfo.challenges.completed[index] ? "Completed" : "Incomplete"

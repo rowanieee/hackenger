@@ -1,0 +1,56 @@
+- pageName = About
+include ./mixins/header
++header(pageName)
+body
+  include ./mixins/navbar
+  +navbar(pageName)
+  section.intro
+    .container
+      .row.text-center
+        .col-md-12.col-sm-12.col-xs-12
+          .heading-count
+            img#prof_img(src="/assets/img/transparent_prof.png").img-fluid
+            h2 Hackanger Guide
+          a.target-scroll.page-scroll(href="#emergency", target="_blank")
+            i.fas.fa-chevron-down.fa-2x
+  section#rules.section-padding-top.section-padding-bottom
+    .container
+      .row.justify-content-center
+        h2.section-title What is Hackenger?
+      .row.justify-content-center
+        .col-md-8.col-lg-6.col-sm-12.fadeInUp(data-animation='fadeInUp').text-center
+          p.
+            Hackenger is a scavenger hunt that runs during ProfHacks where the top three teams will win prizes at the end of ProfHacks. This scavenger hunt has physical
+            component where you need to find things around the Engineering building, mental elements tat require you to solve science and engineering related
+            problems, and an all new "hacker" component where you will need to write code and "hack" the ProfHacks website to find the secrets hidden in its code.
+      br
+      .row.justify-content-center
+        h2.section-title Rules
+      .row.justify-content-center
+        .col-md-8.col-lg-6.col-sm-12.fadeInUp(data-animation='fadeInUp').text-center
+          ol
+            li Any ProfHacks attendee can participate in the Hackenger hunt
+            li You may work alone or in teams of #[strong no more than 4]
+            li.
+              In to participate in the hunt, you must register yourself or your team in the #[a(href="/team/register") Registration page] where you will be able to
+              #[a(href="/team/sign_in") Sign In] to the Hackenger hunt where all of your responses will be recorded automatically
+            li All of the physical challenges will not require you to leave the engineering building, enter any rooms not designated for hackers
+      br
+      .row.justify-content-center
+        h2.section-title Scoring
+      .row.justify-content-center
+        .col-md-8.col-lg-6.col-sm-12.fadeInUp(data-animation='fadeInUp').text-center
+          p.
+            Each challenge is assigned a point value based on its difficulty and there is no penalty for inncorect guesses. The Hackenger website will track the points for all
+            teams automatically and the #[a(href="/leader_board") Leader Board page] will display the real-time rankings of all teams competing in the Hackenger hunt. The
+            final rankings will be based on the highest score accumulated for each team. In the event of a tie, the team that accumulated the tying point value first will be
+            awarded the higher ranking. You don't necessarily have to complete all challenges to win the Hackenger hunt, you just have to have the highest score at the end of
+            ProfHacks.
+      br
+      .row.justify-content-center
+        h2.section-title Questions?
+      .row.justify-content-center
+        .col-md-8.col-lg-6.col-sm-12.fadeInUp(data-animation='fadeInUp').text-center
+          p.
+            If you have any questions or need help getting started with the Hackenger hunt, ask any ProfHacks lead and they will assist you, however they will not be able to
+            give you hints regarding any of the challenges.

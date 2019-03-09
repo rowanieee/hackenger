@@ -2,7 +2,7 @@ const {env} = process
 module.exports = {
   app: {
     port: env.PORT,
-    requireHttps: true
+    requireHttps: false
   },
   database: {
     user: env.PGUSER,

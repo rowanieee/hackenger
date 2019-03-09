@@ -5,18 +5,22 @@
   "main": "app.js",
   "scripts": {
     "test": "nodemon app",
-    "start": "node app"
+    "start": "NODE_ENV=production node app"
   },
   "author": "John McAvoy",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "config": "^3.0.1",
     "express": "^4.16.4",
     "express-fileupload": "^1.0.0",
+    "express-session": "^1.15.6",
     "nodemon": "^1.18.5",
     "pg": "^7.6.1",
     "pug": "^2.0.3",
-    "require-all": "^3.0.0"
+    "require-all": "^3.0.0",
+    "sandbox": "^0.8.6",
+    "session-file-store": "^1.2.0"
   },
   "nodemonConfig": {
     "ext": "pug,js,ejs"
